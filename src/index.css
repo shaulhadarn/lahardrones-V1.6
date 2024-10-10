@@ -1,0 +1,72 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+body {
+  direction: rtl;
+}
+
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+}
+
+.leaflet-control-zoom {
+  margin-bottom: 40px !important;
+}
+
+/* RTL fixes for Leaflet controls */
+.leaflet-control-container .leaflet-top,
+.leaflet-control-container .leaflet-bottom {
+  right: 0;
+  left: auto;
+}
+
+.leaflet-control-container .leaflet-top.leaflet-left,
+.leaflet-control-container .leaflet-bottom.leaflet-left {
+  right: auto;
+  left: 0;
+}
+
+.leaflet-draw-toolbar {
+  margin-right: 0 !important;
+  margin-left: 10px !important;
+}
+
+/* Custom styles for the GeoJSON upload button */
+.leaflet-control-upload {
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+  width: 26px;
+  height: 26px;
+  line-height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+}
+
+.leaflet-control-upload:hover {
+  background-color: #f4f4f4;
+}
+
+.leaflet-touch .leaflet-control-upload {
+  width: 30px;
+  height: 30px;
+}
+
+.leaflet-right .leaflet-draw-toolbar {
+  margin-top: 80px;
+}
+
+.leaflet-right .leaflet-draw-toolbar + .leaflet-control {
+  margin-top: 10px;
+}
+
+/* Ensure the upload button is visible */
+.leaflet-control-upload svg {
+  display: block;
+  margin: auto;
+}
